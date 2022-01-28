@@ -1,0 +1,146 @@
+.header {
+    .top {
+        height: 230px;
+        background: transparent;
+        z-index: 999px;
+        img {
+            position: fixed;
+            align-items: center;
+            top: 15px;
+            height: 150px;
+            width: 300px;
+
+        }
+        a {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 10000;
+        }
+        .header-logo {
+            display: flex;
+            justify-content: center;
+            z-index: 10000;
+            position: relative;
+        }
+    }
+    nav {
+        position: fixed;
+        right: 30px;
+        top: 130px;
+        z-index: 10000;
+
+        .btnActive {
+            transform: rotate(90deg) translateX(30px);
+        }
+        #navbtn {
+            transition: 0.4s;
+
+            span {
+                height: 4px;
+                background: rgb(223, 21, 21);
+                display: block;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            span:first-child {
+                width: 40px;
+                margin-bottom: 5px;
+            }
+            span:last-child {
+                width: 20px;
+            }
+        }
+
+        .navactive {
+            visibility: visible;
+            opacity: 1;
+            line-height: 3.5rem;
+            background: rgba(255, 0, 0, 0.185);
+            border-radius: 30px;
+            padding: 20px;
+        }
+        ul {
+            visibility: hidden;
+            opacity: 0;
+            list-style: none;
+            transform: 0.5s;
+            margin-top: 30px;
+            color: black;
+        }
+        #accueil {
+            color: red;
+        }
+    }
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 16% 16% 16% 13% 23% 16%;
+    grid-template-rows: 170px 220px 220px 120px;
+    grid-template-areas:
+        "bloc1 bloc2 bloc2 bloc2 bloc2 bloc2"
+        "bloc1 bloc3 bloc4 bloc4 bloc4 bloc4"
+        "bloc1 bloc5 bloc6 bloc7 bloc8 bloc9"
+        "bloc1 bloc10 bloc10 bloc10 bloc10 bloc10";
+}
+.parent img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1px;
+}
+.div1 {
+    grid-area: bloc1;
+}
+.div2 {
+    grid-area: bloc2;
+}
+.div3 {
+    grid-area: bloc3;
+    background: url(../img/thewarehouse-bg_03.jpg) center/cover;
+    &:hover {
+        background: url(../img/thewarehouse-bg_03color.jpg) center/cover;
+        transition: 2s;
+        transform: scale(1.2);
+    }
+}
+.div4 {
+    grid-area: bloc4;
+}
+.div5 {
+    grid-area: bloc5;
+    background: url(../img/thewarehouse-bg_05.jpg) center/cover;
+    &:hover {
+        background: url(../img/thewarehouse-bg_05color.jpg) center/cover;
+        transition: 2s;
+        transform: scale(1.2);
+    }
+}
+.div6 {
+    grid-area: bloc6;
+    background: url(../img/thewarehouse-bg_06.jpg) center/cover;
+    &:hover {
+        background: url(../img/thewarehouse-bg_06-color.jpg) center/cover;
+        transition: 2s;
+        transform: scale(1.2);
+    }
+}
+.div7 {
+    grid-area: bloc7;
+}
+.div8 {
+    grid-area: bloc8;
+    background: url(../img/thewarehouse-bg_08.jpg) center/cover;
+    &:hover {
+        background: url(../img/thewarehouse-bg_08color.jpg) center/cover;
+        transition: 2s;
+        transform: scale(1.2);
+    }
+}
+.div9 {
+    grid-area: bloc9;
+}
+.div10 {
+    grid-area: bloc10;
+}

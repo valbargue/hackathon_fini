@@ -1,0 +1,75 @@
+.instafeed {
+    display: flex;
+    flex-direction: column;
+    .social-text h3 {
+        text-align: center;
+        color: red;
+        font-weight: bold;
+        font-size: 3rem;
+        @media screen and (max-width: 800px) {
+            font-size: 2rem;
+        }
+    }
+    .social {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        width: 50%;
+        min-width: 800px;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        @media screen and (max-width: 800px) {
+            min-width: none;
+            justify-content: center;
+            min-width: none;
+            justify-content: flex-start;
+            margin-left: 120px;
+        }
+        .conteneur-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 3fr;
+            gap: 20px;
+            background: none;
+            @media screen and (max-width: 800px) {
+                .pic {
+                    display: none;
+                }
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 3fr;
+            }
+        }
+        .conteneur-grid > div {
+            height: 180px;
+            width: 180px;
+            border-radius: 25px;
+            border: 1px solid black;
+            > img {
+                border-radius: 25px;
+                height: 180px;
+                width: 180px;
+            }
+        }
+        .social-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media screen and (max-width: 800px) {
+                display: none;
+                justify-content: center;
+            }
+            .warehouse-logo {
+                padding-bottom: 30px;
+            }
+            .logo-instagram {
+                padding-bottom: 30px;
+            }
+            p {
+                padding-left: 15px;
+                font-size: 1.2rem;
+                font-family: font-1;
+                color: red;
+            }
+        }
+    }
+}

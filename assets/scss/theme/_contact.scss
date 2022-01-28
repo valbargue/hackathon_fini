@@ -1,0 +1,43 @@
+#contact {
+  h2 {
+    text-align: center;
+  }
+  .contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 7em;
+
+    @media screen and (max-width: 876px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .map {
+      width: 400px;
+      margin-left: 4em;
+
+      iframe {
+        width: 100%;
+        min-height: 400px;
+
+        @media screen and (max-width: 436px) {
+          width: 70vw;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 876px) {
+        width: 400px;
+        padding-top: 2em;
+      }
+    }
+    .info-address {
+      padding-left: 3em;
+
+      @media screen and (max-width: 436px) {
+        width: 100vw;
+      }
+    }
+  }
+}

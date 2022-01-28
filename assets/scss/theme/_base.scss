@@ -1,0 +1,36 @@
+h1 {
+  font-family: "font-1";
+  font-size: 3rem;
+  color: $primary-color;
+}
+h2 {
+  font-family: $font-1;
+  font-size: 3rem;
+  color: $primary-color;
+}
+h3 {
+  font-family: "font-1", Helvetica, sans-serif;
+  font-size: 1.25rem;
+  color: $primary-color;
+}
+h4 {
+  font-family: $font-1;
+  color: $primary-color;
+}
+
+p {
+  color: black;
+  font-family: $font-btn;
+  font-size: 1rem;
+}
+
+a {
+  @include btn ;
+  font-family: $font-btn;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  &:hover {
+    @include btn-hover
+  }
+}

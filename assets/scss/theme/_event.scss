@@ -1,0 +1,109 @@
+.event {
+    .content-event {
+        padding-top: 7em;
+        width: 50%;
+        margin: 0 auto;
+        padding-bottom: 4em;
+    }
+
+    .card-event {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        @media screen and (max-width: 800px) {
+            flex-wrap: wrap;
+        }
+
+        .cardEvent {
+            font-family: $font-1;
+            color: white;
+            font-size: 1.56rem;
+            margin: 0 0.7em;
+            height: 175px;
+            width: 175px;
+
+            border-radius: 15px;
+            background-color: #dcdddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 800px) {
+                font-size: 1rem;
+                margin-bottom: .7em;
+            }
+        }
+        .egv {
+            font-size: 3rem;
+            text-align: center;
+
+            @media screen and (max-width: 800px) {
+                font-size: 1rem;
+            }
+        }
+        .modal {
+            background-color: #dcdddd;
+            border: 1px solid #707070;
+            border-radius: 20px;
+            width: 400px;
+            height: 300px;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -25%);
+            opacity: 0;
+            transition: 0.5s !important;
+            visibility: hidden;
+
+            @media screen and (max-width: 800px) {
+              width: 350px;  
+            }
+
+            .content-modal {
+                width: 100%;
+                padding: 1em 3em;
+                text-align: center;
+
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    padding: 0.3em;
+                }
+                i {
+                    color: #595757;
+                    font-size: 2rem;
+                    padding: 0 0.7em;
+                }
+                overflow-y: hidden;
+            }
+
+            button {
+                display: block;
+                margin-left: auto;
+            }
+            @keyframes anim {
+                to {
+                    opacity: 1;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .modalActive {
+            animation: anim 0.5s forwards;
+            visibility: visible;
+            display: block !important;
+        }
+    }
+    .bot-content-event {
+        margin-top: 3em;
+        p {
+            color: $primary-color;
+            text-align: center;
+            margin-top: 2em;
+            font-family: $font-1;
+        }
+    }
+}

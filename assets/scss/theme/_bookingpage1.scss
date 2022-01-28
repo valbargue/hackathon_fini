@@ -1,0 +1,171 @@
+.booking-page1 {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 800px;
+      background: url(../img/thewarehouse-bg.jpg) center/cover;
+    }
+    .header-logo {
+      display: flex;
+      justify-content: center;
+      z-index: 10000;
+      position: relative;
+      img {
+        position: fixed;
+        align-items: center;
+        top: 15px;
+        height: 150px;
+        width: 300px;
+      }
+    }
+    nav {
+      position: fixed;
+      right: 30px;
+      top: 130px;
+      z-index: 10000;
+      .btnActive {
+        transform: rotate(90deg) translateX(30px);
+      }
+      #navbtn {
+        transition: 0.4s;
+        span {
+          height: 4px;
+          background: rgb(223, 21, 21);
+          display: block;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+        span:first-child {
+          width: 40px;
+          margin-bottom: 5px;
+        }
+        span:last-child {
+          width: 20px;
+        }
+      }
+      .navactive {
+        visibility: visible;
+        opacity: 1;
+        line-height: 3.5rem;
+        background: rgba(255, 0, 0, 0.185);
+        border-radius: 30px;
+        padding: 20px;
+      }
+      ul {
+        visibility: hidden;
+        opacity: 0;
+        list-style: none;
+        transform: 0.5s;
+        margin-top: 30px;
+        color: black;
+      }
+      #accueil {
+        color: red;
+      }
+    }
+    .Booking {
+      padding-top: 300px;
+      padding-bottom: 80px;
+      .booking-container {
+        z-index: 1000;
+        position: relative;
+        padding: 40px;
+        display: flex;
+        min-width: 1000px;
+        max-width: 1000px;
+        width: 40%;
+        height: 700px;
+        margin: 0 auto;
+        border-radius: 25px;
+        background: WHITE;
+        box-shadow: 1px 1px 5px grey;
+        .calendar {
+          display: flex;
+          flex-direction: column;
+          h3 {
+            text-align: left;
+            font-size: 3rem;
+            color: red;
+            padding-bottom: 20px;
+            font-family: font-1;
+            font-weight: bold;
+          }
+          h6 {
+            background: lightslategrey;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          thead {
+            background: darkgray;
+            height: 80px;
+          }
+        }
+        .booking-form {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          padding-top: 120px;
+          .flex-selections {
+            display: flex;
+            flex-direction: column;
+            margin-left: 80px;
+          }
+          #room-selection {
+            padding-bottom: 20px;
+            font-family: font-1;
+            font-size: 1.5rem;
+          }
+          .roomnames {
+            border-radius: 25px;
+            padding: 6px;
+            color: red;
+            font-weight: bold;
+            width: 80%;
+            box-shadow: 0px 3px 6px #000000;
+          }
+          #booking-time {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: font-1;
+            font-size: 1.5rem;
+          }
+          .time-selection {
+            border-radius: 25px;
+            padding: 6px;
+            color: red;
+            font-weight: bold;
+            width: 80%;
+            box-shadow: 0px 3px 6px #000000;
+          }
+          #playersreservation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: font-1;
+            font-size: 1.5rem;
+          }
+          .playersreservation {
+            border-radius: 25px;
+            padding: 6px;
+            color: red;
+            font-weight: bold;
+            width: 80%;
+            box-shadow: 0px 3px 6px #000000;
+          }
+          a {
+            position: absolute;
+            @include btn;
+            align-items: center;
+            text-align: center;
+            width: 40%;
+            transform: translateY(+950%);
+            margin-left: 185px;
+            box-shadow: 0px 3px 6px #000000;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,27 @@
+$primary-color : #ff0000;
+$font-1 : "font-1";
+$font-btn : "font-btn";
+
+@mixin btn() {
+    display:inline-block;
+    padding: 10px 30px;
+    background-color: white;
+    box-shadow: 1px 1px 5px grey;
+    color: #595757;
+    border-radius: 20px;
+    align-items: center;
+}
+@mixin btn-hover() {
+    display:inline-block;
+    padding: 10px 30px;
+    background-color: $primary-color;
+    box-shadow: 1px 1px 5px grey;
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+}
+
+@mixin yaR() {
+    color: black;
+    padding: none;
+}
